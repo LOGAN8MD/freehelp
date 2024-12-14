@@ -457,12 +457,15 @@
 
 .booking_content{
   max-width: 600px; /* Limit  size */
-  padding: 20px; 
+}
+
+.booking_content_div{
+  padding: 10px;
 }
 
 /* Left side (Image) */
 .booking_card {
-  padding: 20px; 
+  margin-top: 5%;
   flex: 1; /* Allow this side to take up remaining space */
    /* Center the text horizontally */
 }
