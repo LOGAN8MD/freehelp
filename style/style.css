@@ -119,6 +119,13 @@
     font-family: Serif;
       color: white !important; /* Apply white color to the text */
   }
+
+  /* Hover effect on the <a> tag */
+.nav-link:hover {
+  background-color: #19333d;
+  border-radius: 20%; /* Change this to your desired hover color */
+  
+}
   
   /* Optionally, you can add a hover effect to keep consistency */
   .navbar-light .navbar-nav .nav-link:hover,
