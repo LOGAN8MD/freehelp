@@ -1,0 +1,801 @@
+
+:root {
+  --primary-color: #008080; /* Teal */
+  --secondary-color: #d3d3d3; /* Light Gray */
+  --text-color: #333333; /* Dark Gray */
+
+  --heading1-color:#63d3d3;
+  --heading1-size:34px;
+  --heading1-font:sans-serif;
+
+  --p1-color:white;
+  --p1-size:16px;
+  --p1-font:sans-serif;
+    
+ 
+}
+
+
+.fixNav{
+  position: fixed;
+  z-index: 3;
+  top:2rem ;
+  width: 100%;
+}
+
+.scroll {
+    position: fixed;
+    height: 2rem;
+    width: 2rem;
+    color: white;
+    background:var(--primary-color);
+    right: 1.5rem;
+    bottom: 1.5rem;
+    text-align: center;
+    line-height: 2rem;
+    z-index: 3;
+  }
+
+
+  /* https://images.squarespace-cdn.com/content/v1/673b7608a33120153d001e1d/1722371797.702343-NYPLWINYNJRYTXARANGF/imgg-od3-4h6epnf2.png */
+
+  /* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQqHvMIdT-IDw-FcsjOiC6TTFbc_jmKbFiDQ&s */
+
+.header {
+    position: relative; /* Make sure the navbar sits on top of the header */
+    color: #ffffff;
+    /* background: linear-gradient(to bottom, #63d3d3, #19334d); */
+    /* background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQqHvMIdT-IDw-FcsjOiC6TTFbc_jmKbFiDQ&s) no-repeat; */
+    background:  url(../assets/img3.png) no-repeat;
+    background-size:cover;
+    padding-top: 0px; /* Optional: Adjust space to prevent content from being hidden behind navbar */
+    z-index: 1; /* Make sure header's background stays behind the navbar */
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); 
+    z-index: -1; 
+  }
+  
+  /* Initial state of the navbar */
+
+/* Navbar base styles */
+.navbar {
+  position: relative;
+  width: 100%;
+  background-color: transparent; /* Slightly transparent */
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+
+
+
+
+/* When scrolling, add a white background and change text color */
+.navbar.scrolled {
+  /* Background color when scrolled */
+  /* background: linear-gradient(to top, #09203f 0%, #537895 100%);  */
+  /* background: linear-gradient(to top, rgba(125, 129, 133, 0.4) 0%, rgba(83, 120, 149, 12) 100%); */
+  background-color: #008080;
+  
+  color: white;  /* Text color when scrolled */
+}
+
+/* Navbar links color change on scroll */
+.navbar.scrolled .navbar-nav .nav-link {
+  color: white !important; /* Ensure links become black */
+}
+
+/* Navbar brand color change on scroll */
+.navbar.scrolled .navbar-brand {
+  color: white !important; /* Change brand name color to black */
+}
+
+/* Optional: Add a shadow effect when scrolling */
+.navbar.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect for scrolled navbar */
+}
+
+/* Additional padding to prevent content from hiding behind the navbar */
+
+  
+  /* Styling for navbar links */
+  .header a {
+    text-decoration: none;
+    color: #e6e6e6;
+  }
+
+  .navbar-light .navbar-nav .nav-link,
+  .navbar-light .navbar-brand {
+    font-size: 1.5rem;
+    font-family: Serif;
+      color: white !important; /* Apply white color to the text */
+  }
+  
+  /* Optionally, you can add a hover effect to keep consistency */
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-brand:hover {
+      color: #f1f1f1 !important; /* Slightly lighter color on hover */
+  }
+  
+/* Styling for the header banner section */
+.header__banner__name_social_handles {
+    position: relative;
+    text-align: center; /* Center the text horizontally */
+    color: #ffffff; /* White text color for contrast */
+    padding: 200px 20px; /* Add space at the top and sides */
+    z-index: 1; /* Ensure it's above the background image */
+}
+
+/* Styling for the banner title */
+.banner__name {
+    font-size: 2.5rem; /* Font size for large screen */
+    margin-bottom: 20px; /* Space below the heading */
+    font-weight: bold;
+    text-transform: uppercase; /* Make the title more impactful */
+}
+
+/* Styling for the first part of the title */
+.banner__name__span {
+    font-family: Serif;
+    font-size: 35px;
+    /* color: #f1f1f1; */
+    /* color:#ffffff; */
+    color: #63d3d3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for readability */
+}
+
+/* Styling for the word "Decisions" */
+.banner__name__decisions {
+    display: block;
+    font-family: Serif;
+    font-size: 35px; /* Increase font size of "Decisions" to make it stand out */
+    margin-top: 10px; /* Space between "Big" and "Decisions" */
+    font-weight: bold;
+    /* color: #f1f1f1;   */
+    color: #63d3d3;
+    text-align: center; /* Center "Decisions" */
+}
+
+/* Styling for the description text */
+.banner__social_handles p {
+    font-size: 16px; /* Font size for the description */
+    line-height: 1.6; /* Space between lines for readability */
+    max-width: 800px; /* Limit the width to make it look neat */
+    margin: 0 auto; /* Center the text */
+    color: #dcdcdc; /* Slightly softer white for the paragraph */
+    text-align: center;
+    padding-top: 15px;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .banner__name h1 {
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .banner__social_handles p {
+        font-size: 1rem; /* Smaller text for better mobile readability */
+        padding-left: 10px;
+        padding-right: 10px; /* Add padding for smaller screen */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner__name h1 {
+        font-size: 2rem; /* Smaller title size on very small screens */
+    }
+
+    .banner__social_handles p {
+        font-size: 0.9rem; /* Further reduce font size */
+    }
+}
+
+
+
+
+
+/* Overall container for the About section */
+.about {
+  /* background: radial-gradient(circle at 10% 20%, rgb(215, 223, 252) 0%, rgb(255, 255, 255) 0%, rgb(215, 223, 252) 84%); */
+  /* background:  url(../assets/img13.jpeg) no-repeat; */
+  /* background-size:cover; */
+  z-index: 1;
+  position: relative; /* Make sure the navbar sits on top of the header */
+  color: #ffffff;
+  /* background-color: #ffffff; */
+    background-color: #19333d;
+     /* Background color for the section */
+     /* background: linear-gradient(to top, #09203f 0%, #537895 100%); */
+    padding: 50px 0; /* Add space around the section */
+  }
+
+  .about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: -1; 
+  }
+
+  
+  .about_container {
+    display: flex; /* Use flexbox to create a two-column layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    max-width: 1200px; /* Set a max-width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    gap: 30px; /* Space between the image and content */
+  }
+  
+  /* Left side (Image) */
+  .about_image img {
+    width: auto; /* Make the image take up the full width of its container */
+    height: 600px; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners to the image */
+    max-width: 500px; /* Limit image size */
+    padding: 20px; /* Add padding around the image */
+  }
+  
+  /* Right side (Title and description) */
+  .about_content {
+    flex: 1; /* Allow this side to take up remaining space */
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  .about_title {
+
+    /* font-weight: bold;  */
+    /* margin-bottom: 20px;  */
+    color: var(--heading1-color);
+    font-family: var(--heading1-font);
+    font-size: var(--heading1-size);
+  }
+  
+  .about_description {
+    font-size: 14px;
+    
+    font-family: 'Lato',sans-serif;
+    font-size: 19px; 
+    /* color: #666;  */
+    line-height: 1.5; 
+    /* margin: 0 auto;   */
+  }
+  
+  /* Responsive Design - For smaller screens */
+  @media (max-width: 768px) {
+    .about_container {
+      flex-direction: column; /* Stack the image and content on top of each other */
+    }
+
+    .about_title{
+      font-size: 2rem;
+    }
+    .about_description{
+      font-size: 1rem;
+    }
+  
+    .about_image img {
+      height: 400px;
+      max-width: 100%; /* Make the image take up full width on smaller screens */
+    }
+  }
+
+
+  .our_service{
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    background-color: #333333; 
+    /* background:  radial-gradient(590px at 8.2% 13.8%, rgb(18, 35, 60) 0%, rgb(187, 187, 187) 90%); */
+    /* background:  url(../assets/img13.jpeg) no-repeat; */
+    /* background-size:cover; */
+  }
+
+  .our_service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+  }
+
+
+
+
+/* Styling for the 'Our service' section title OUTSIDE the flex */
+/* Service Image */
+.service_image {
+  width: 100%;
+  height:400px ;
+  max-width: 50%;  /* Ensures that images don't stretch on larger screens */
+  object-fit: cover; /* Ensures image fills the container */
+  border-radius: 10px; /* Optional: Add rounded corners to images */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add some shadow for better look */
+}
+
+/* Styling for the carousel items */
+.carousel-inner {
+  padding: 20px;
+}
+
+.carousel-item {
+  /* display: flex; */
+  align-items: center;
+}
+
+/* Title styling */
+.service_section_title {
+  text-align: center;
+  font-family: Serif;
+  background-color: transparent;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.services_header{
+  /* font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  color: var(--primary-color); */
+  color: var(--heading1-color);
+  font-family: var(--heading1-font);
+  font-size: var(--heading1-size);
+}
+.services_p{
+
+  color: var(--p1-color);
+  font-family: var(--p1-font);
+  font-size: var(--p1-size);
+
+  /* font-size: 16px;
+  font-family: Serif;
+  color:  white */
+}
+.services_ul{
+
+  color: var(--p1-color);
+  font-family: var(--p1-font);
+  font-size: var(--p1-size);
+
+  /* font-size: 16px;
+  font-family: Serif;
+  color: white; */
+}
+
+
+@media (max-width: 767px) {
+   /* Stack content vertically on small screens */
+  /* .carousel-item {
+      flex-direction: column;
+  } */
+  .service_image {
+     /* Ensure image takes full width on mobile */
+      max-width: 100%; 
+      height:250px ;
+  }
+}
+
+
+
+.booking{
+  /* background: radial-gradient(circle at 10% 20%, rgb(215, 223, 252) 0%, rgb(255, 255, 255) 0%, rgb(215, 223, 252) 84%); */
+  background-color: #19333d;
+  z-index: 1;
+  position: relative;
+  padding: 20px 0;
+  color: #ffffff;
+}
+.booking::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: -1; 
+}
+
+.booking_container {
+  display: flex; /* Use flexbox to create a two-column layout */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  max-width: 1200px; /* Set a max-width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  gap: 30px; /* Space between the image and content */
+}
+
+.booking_content{
+  max-width: 600px; /* Limit  size */
+  padding: 20px; 
+}
+
+/* Left side (Image) */
+.booking_card {
+  padding: 20px; 
+  flex: 1; /* Allow this side to take up remaining space */
+   /* Center the text horizontally */
+}
+
+.booking_title{
+  color: var(--heading1-color);
+  font-family: var(--heading1-font);
+  font-size: var(--heading1-size);
+}
+.booking_discription{
+  color: var(--p1-color);
+  font-family: var(--p1-font);
+  font-size: var(--p1-size);
+}
+
+
+
+  /* Responsive Design - For smaller screens */
+  @media (max-width: 768px) {
+    .booking_container {
+      flex-direction: column; /* Stack the image and content on top of each other */
+    }
+
+  
+    .booking_content{
+      max-width: 100%; /* Make the image take up full width on smaller screens */
+    }
+  }
+
+
+
+
+
+
+
+
+  /* Overall styling for the contact section */
+.contact {
+  /* background:  radial-gradient(590px at 8.2% 13.8%, rgb(18, 35, 60) 0%, rgb(187, 187, 187) 90%); */
+    /* background:  url(../assets/img13.jpeg) no-repeat;
+    background-size:cover; */
+    background-color: #333333; 
+    padding: 60px 20px; /* Add padding to the section */
+    z-index: 1;
+    position: relative;
+    color: #ffffff;
+  }
+
+  .contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+  }
+
+  .contact_container{
+    display: flex; /* Use flexbox to create a two-column layout */
+    justify-content: center; /* Center the content horizontally */
+     /* Center the content vertically */
+    max-width: 1200px; /* Set a max-width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    gap: 30px; /* Space between the image and content */
+  }
+
+  .contact_content{
+    max-width: 600px; /* Limit  size */
+    padding: 20px; 
+  }
+
+  /* Styling for the contact form container */
+.contact_form_container {
+  /* Center the form horizontally */
+  /* justify-content: center;  */
+  /* Center the form vertically */
+  /* align-items: center;  */
+  
+  padding: 20px; 
+  flex: 1;
+}
+  
+  /* Styling for the 'Contact Us' title */
+  .contact_title {
+    margin-bottom: 20px; 
+    color: var(--heading1-color);
+    font-family: var(--heading1-font);
+    font-size: var(--heading1-size);
+  }
+  
+  /* Styling for the description text */
+  .contact_description {
+    color: var(--p1-color);
+    font-family: var(--p1-font);
+    font-size: var(--p1-size);
+    /* font-family: Serif;
+    font-size: 1.2rem; 
+    color: whitesmoke;  */
+     /* Center the description */
+    max-width: 700px; /* Limit the width of the description for better readability */
+    margin: 0 auto; 
+    margin-bottom: 40px;
+  }
+  
+ 
+  
+  /* Styling for the form */
+  .contact_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* Limit the form width */
+    padding: 20px;
+    background-color: transparent;
+    
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 4px 10px rgba(53, 166, 231, 0.438); /* Add a light shadow for better look */
+    
+  }
+  
+  /* Styling for form groups (input fields) */
+  .form_group {
+    margin-bottom: 20px; /* Space between form fields */
+  }
+  
+  /* Styling for the form labels */
+  .form_group label {
+    display: block; /* Make the label block level */
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: bold; /* Make the label text bold */
+  }
+  
+  /* Styling for the input fields and textarea */
+  .form_group input,
+  .form_group textarea {
+    width: 100%; /* Make inputs and textarea take full width */
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    /* border: 1px solid black; */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(53, 166, 231, 0.438);
+    background-color: transparent; /* Include padding in width calculation */
+  }
+  
+  /* Styling for the textarea */
+  .form_group textarea {
+    height: 150px; /* Set a height for the textarea */
+    resize: vertical; /* Allow resizing vertically */
+  }
+  
+  /* Button styling */
+  .submit_button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: grey; /* Green background for the submit button */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-top: 20px; /* Space above the button */
+    align-self: center; /* Center the button */
+  }
+
+  /* CSS to hide up and down arrows in number input */
+input[type="number"].no-spinner {
+  -moz-appearance: textfield; /* Firefox */
+  -webkit-appearance: none;   /* Chrome, Safari, Opera */
+  appearance: none;           /* For modern browsers */
+}
+
+input[type="number"].no-spinner::-webkit-outer-spin-button,
+input[type="number"].no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;  /* Removes spinner */
+  margin: 0;                 /* Removes margin */
+}
+  
+  /* Button hover effect */
+  .submit_button:hover {
+    background-color: #252725; /* Darker green when hovered */
+  }
+  
+  /* Responsive Design for smaller screens */
+
+@media (max-width:1108px) {
+  .contact_container {
+    flex-direction: column; 
+  }
+  .contact_content{
+    justify-items: center;
+    max-width: 100%; 
+  }
+  .contact_form_container{
+    justify-items: center;
+  }
+  
+}
+
+  @media (max-width: 768px) {
+    
+
+    .contact_container {
+      flex-direction: column; /* Stack the image and content on top of each other */
+    }
+    .contact_content{
+      max-width: 100%; /* Make the image take up full width on smaller screens */
+    }
+  }
+
+
+
+/* Pop-up Modal Styles */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures the modal appears above other content */
+}
+
+.popup_content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+.popup_button {
+  padding: 10px 20px;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup_button:hover {
+  background-color: #252725;
+}
+
+/* .getInTouch{
+  font-family: Serif;
+} */
+
+.getInTouch {
+  font-family: Serif;
+}
+
+@media (max-width: 1200px) {
+  /* On larger devices, everything should be in one line */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .getInTouch h2 {
+    font-size: 2rem;
+  }
+
+  .section-title-sm h3 {
+    font-size: 1.5rem;
+  }
+
+  .getInTouch input {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .getInTouch button {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+}
+
+
+.footer {
+  z-index: 1;
+  position: relative; /* Make sure the navbar sits on top of the header */
+  color: #ffffff;
+  /* background-color: #ffffff; */
+    background-color: #19333d;
+    padding: 50px 0; /* Add space around the section */
+  }
+
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: -1; 
+  }
+
+
+
+
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack columns on small screens */
+    text-align: center;
+  }
+
+  .getInTouch {
+    font-size: 1rem;
+  }
+
+  .getInTouch input {
+    width: 90%;
+  }
+
+  .getInTouch button {
+    width: 90%;
+  }
+
+  .section-title-sm h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .getInTouch {
+    font-size: 0.9rem;
+  }
+
+  .section-title-sm h3 {
+    font-size: 1rem;
+  }
+
+  .getInTouch input {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .getInTouch button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .getInTouch h2 {
+    font-size: 1.5rem;
+  }
+
+  .getInTouch p {
+    font-size: 0.9rem;
+  }
+}
