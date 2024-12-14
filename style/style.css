@@ -181,11 +181,11 @@
         font-size: 2.5rem; /* Reduce font size for smaller screens */
     }
   .banner__name__span{
-      font-size: 20px;
+      font-size: 25px;
     }
 
     .banner__name__decisions{
-      font-size: 20px;
+      font-size: 25px;
     }
 
     .banner__social_handles p {
@@ -200,11 +200,11 @@
         font-size: 2rem; /* Smaller title size on very small screens */
     }
     .banner__name__span{
-      font-size: 20px;
+      font-size: 25px;
     }
 
     .banner__name__decisions{
-      font-size: 20px;
+      font-size: 25px;
     }
 
 
