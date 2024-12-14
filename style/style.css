@@ -480,10 +480,10 @@
     }
 
     .booking_title{
-      font-size: (--heading2-size);
+      font-size: var(--heading2-size);
     }
     .booking_discription{
-      font-size: (--p2-size);
+      font-size: var(--p2-size);
     }
   
     .booking_content{
@@ -674,10 +674,10 @@ input[type="number"].no-spinner::-webkit-inner-spin-button {
     }
 
     .contact_title{
-      font-size: (--heading2-size);
+      font-size: var(--heading2-size);
     }
     .contact_description{
-      font-size: (--p2-size);
+      font-size: var(--p2-size);
     }
 
     
