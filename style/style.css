@@ -180,9 +180,16 @@
     .banner__name h1 {
         font-size: 2.5rem; /* Reduce font size for smaller screens */
     }
+  .banner__name__span{
+      font-size: 20px;
+    }
+
+    .banner__name__decisions{
+      font-size: 20px;
+    }
 
     .banner__social_handles p {
-        font-size: 1rem; /* Smaller text for better mobile readability */
+        font-size: 10px; /* Smaller text for better mobile readability */
         padding-left: 10px;
         padding-right: 10px; /* Add padding for smaller screen */
     }
@@ -192,9 +199,17 @@
     .banner__name h1 {
         font-size: 2rem; /* Smaller title size on very small screens */
     }
+    .banner__name__span{
+      font-size: 20px;
+    }
+
+    .banner__name__decisions{
+      font-size: 20px;
+    }
+
 
     .banner__social_handles p {
-        font-size: 0.9rem; /* Further reduce font size */
+        font-size: 10px; /* Further reduce font size */
     }
 }
 
