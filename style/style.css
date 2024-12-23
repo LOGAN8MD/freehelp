@@ -464,7 +464,7 @@
 }
 
 .booking_card {
-  margin-top: 5%;
+ /* margin-top: 5%; */
   flex: 1; /* Allow this side to take up remaining space */
    /* Center the text horizontally */
 }
